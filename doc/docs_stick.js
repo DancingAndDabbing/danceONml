@@ -2,146 +2,97 @@
 // in index.html
 
 // The A section of content
-let ST_TITLES = ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'];
+let ST_TITLES = ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6'];
 
 let st1 = `(pose) => [
     {
-        what: 'circle',
-    }
+        what: 'line',
+    },
 ];`
 
 let st2 = `(pose) => [
     {
-        what: 'circle',
+        what: 'line',
         where: {
-            x: 200,
-            y: 200
+            x1: 30,
+            y1: 30,
+            x2: 60,
+            y2: 80,
         },
-    }
-];`
+    },
+];
+`
 
 let st3 = `(pose) => [
     {
-        what: 'circle',
+        what: 'line',
         where: {
-            x: 200,
-            y: 200
+            x1: pose.leftElbow.x,
+            y1: pose.leftElbow.y,
+            x2: pose.leftWrist.x,
+            y2: pose.leftWrist.y,
         },
-        how: {
-            d: 40,
-            fill: "purple",
-            stroke: "white",
-            strokeWeight: 4,
-        },
-    }
-];`
+    },
+];`;
 
 let st4 = `(pose) => [
     {
-        what: 'circle',
+        what: 'line',
         where: {
-            x: pose.nose.x,
-            y: pose.nose.y
+            x1: pose.leftElbow.x,
+            y1: pose.leftElbow.y,
+            x2: pose.leftWrist.x,
+            y2: pose.leftWrist.y,
         },
         how: {
-            d: 40,
-            fill: "purple",
-            stroke: "white",
             strokeWeight: 4,
+            stroke: 'lime'
         },
-    }
+    },
 ];`;
 
 let st5 = `(pose) => [
     {
-        what: 'square',
-        where: { x: 0, y: 0 },
-        how: { fill: "black", s: 1000 },
-    },
-    {
-        what: 'circle',
+        what: 'line',
+        when: pose.leftWrist.y < pose.leftElbow.y &&
+              abs(pose.leftWrist.x - pose.leftElbow.x) < 30,
         where: {
-            x:pose.nose.x,
-            y: pose.nose.y
+            x1: pose.leftElbow.x,
+            y1: pose.leftElbow.y,
+            x2: pose.leftWrist.x,
+            y2: pose.leftWrist.y,
         },
         how: {
-            d: 40,
-            fill: "black",
-            stroke: "white",
             strokeWeight: 4,
+            stroke: 'lime'
+        },
+    },
+];`;
 
-        },
-    },
+let st6 = `(pose, poseHistory, tm) => [
     {
         what: 'line',
+        when: tm[0].probability > 0.9,
         where: {
-            x1: pose.nose.x,
-            x2: (pose.leftHip.x + pose.rightHip.x) / 2,
-            y1: pose.nose.y + 20,
-            y2: (pose.leftHip.y + pose.rightHip.y) / 2,
+            x1: pose.leftElbow.x,
+            y1: pose.leftElbow.y,
+            x2: pose.leftWrist.x,
+            y2: pose.leftWrist.y,
         },
         how: {
             strokeWeight: 4,
+            stroke: 'lime'
         },
     },
-    {
-        what: 'line',
-        where: {
-            x1: [
-                    pose.nose.x, pose.nose.x,
-                    pose.rightShoulder.x, pose.leftShoulder.x
-                ],
-            y1: [
-                    pose.nose.y + 20, pose.nose.y + 20,
-                    pose.rightShoulder.y, pose.leftShoulder.y
-                ],
-            x2: [
-                    pose.rightShoulder.x, pose.leftShoulder.x,
-                    pose.rightWrist.x, pose.leftWrist.x
-                ],
-            y2: [
-                    pose.rightShoulder.y, pose.leftShoulder.y,
-                    pose.rightWrist.y, pose.leftWrist.y
-                ],
-        },
-        how: {
-            strokeWeight: 4,
-            stroke: "white",
-        },
-    },
-    {
-        what: 'line',
-        where: {
-            x1: [
-                    (pose.leftHip.x + pose.rightHip.x) / 2, (pose.leftHip.x + pose.rightHip.x) / 2,
-                    pose.rightKnee.x, pose.leftKnee.x
-                ],
-            y1: [
-                    (pose.leftHip.y + pose.rightHip.y) / 2, (pose.leftHip.y + pose.rightHip.y) / 2,
-                    pose.rightKnee.y, pose.leftKnee.y
-                ],
-            x2: [
-                    pose.rightKnee.x, pose.leftKnee.x,
-                    pose.rightAnkle.x, pose.leftAnkle.x
-                ],
-            y2: [
-                    pose.rightKnee.y, pose.leftKnee.y,
-                    pose.rightAnkle.y, pose.leftAnkle.y
-                ],
-        },
-        how: {
-            strokeWeight: 4,
-            stroke: "white",
-        },
-    },
-];`
+];`;
 
 // Must be a list of lists of code examples
 // Probably in the future this could include text and examples
 let ST_CODE = [
-    [{code:st1, description: 'just a circle. who knows where it goes?'}],
-    [{code:st2, description: 'circle, but less crazy.'}],
-    [{code:st3, description: 'humble circle. not much more, but it knows what it is and where it wants to be.'}],
-    [{code:st4, description: 'circle that moves as we do!'}],
-    [{code:st5, description: 'whole stick figure.'}],
+    [{code:st1, description: 'just a line. where it goes, nobody knows...'}],
+    [{code:st2, description: 'line, but less crazy.'}],
+    [{code:st3, description: 'stick figure arm?'}],
+    [{code:st4, description: 'neon laser arm thingy.'}],
+    [{code:st5, description: 'try turning it on and off!'}],
+    [{code:st6, description: 'with teachable machine.'}]
 ];
