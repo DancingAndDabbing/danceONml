@@ -27,10 +27,10 @@ let st3 = `(pose) => [
     {
         what: 'line',
         where: {
-            x1: pose.leftElbow.x,
-            y1: pose.leftElbow.y,
-            x2: pose.leftWrist.x,
-            y2: pose.leftWrist.y,
+            x1: pose.rightElbow.x,
+            y1: pose.rightElbow.y,
+            x2: pose.rightWrist.x,
+            y2: pose.rightWrist.y,
         },
     },
 ];`;
@@ -39,10 +39,10 @@ let st4 = `(pose) => [
     {
         what: 'line',
         where: {
-            x1: pose.leftElbow.x,
-            y1: pose.leftElbow.y,
-            x2: pose.leftWrist.x,
-            y2: pose.leftWrist.y,
+            x1: pose.rightElbow.x,
+            y1: pose.rightElbow.y,
+            x2: pose.rightWrist.x,
+            y2: pose.rightWrist.y,
         },
         how: {
             strokeWeight: 4,
@@ -54,13 +54,13 @@ let st4 = `(pose) => [
 let st5 = `(pose) => [
     {
         what: 'line',
-        when: pose.leftWrist.y < pose.leftElbow.y &&
-              abs(pose.leftWrist.x - pose.leftElbow.x) < 30,
+        when: pose.rightWrist.y < pose.rightElbow.y &&
+              abs(pose.rightWrist.x - pose.rightElbow.x) < 30,
         where: {
-            x1: pose.leftElbow.x,
-            y1: pose.leftElbow.y,
-            x2: pose.leftWrist.x,
-            y2: pose.leftWrist.y,
+            x1: pose.rightElbow.x,
+            y1: pose.rightElbow.y,
+            x2: pose.rightWrist.x,
+            y2: pose.rightWrist.y,
         },
         how: {
             strokeWeight: 4,
@@ -74,10 +74,10 @@ let st6 = `(pose, poseHistory, tm) => [
         what: 'line',
         when: tm[0].probability > 0.9,
         where: {
-            x1: pose.leftElbow.x,
-            y1: pose.leftElbow.y,
-            x2: pose.leftWrist.x,
-            y2: pose.leftWrist.y,
+            x1: pose.rightElbow.x,
+            y1: pose.rightElbow.y,
+            x2: pose.rightWrist.x,
+            y2: pose.rightWrist.y,
         },
         how: {
             strokeWeight: 4,
