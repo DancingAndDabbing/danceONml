@@ -68,11 +68,18 @@ let poser; // Code API - This will all parsing/running of user code
 let cacher; // Used for saving code to local cache
 
 let preloadedPredictions; // temporary solution to prevent load times on default video
+let SmoochSansBlack;
+let BhuTukaExpandedOne;
+let Inconsolata;
 
 // -----                                       -----
 
 // ----- Main P5 Functions -----
 function preload() {
+    SmoochSansBlack = loadFont('assets/fonts/SmoochSans-Black.ttf');
+    BhuTukaExpandedOne=loadFont('assets/fonts/BhuTukaExpandedOne.ttf')
+    Inconsolata=loadFont('assets/fonts/Inconsolata.ttf');
+    
     tmClassifier = new TMClassifier();
     tmClassifier.loadJSON(options);
     // Temporary solution to prevent classifier loading with
@@ -82,6 +89,8 @@ function preload() {
         tmClassifier.predictions = preloadedPredictions.predictions;
         tmClassifier.gotAllFrames = true;
     });
+
+
 
 }
 
