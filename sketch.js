@@ -79,7 +79,7 @@ function preload() {
     SmoochSansBlack = loadFont('assets/fonts/SmoochSans-Black.ttf');
     BhuTukaExpandedOne=loadFont('assets/fonts/BhuTukaExpandedOne.ttf')
     Inconsolata=loadFont('assets/fonts/Inconsolata.ttf');
-    
+
     tmClassifier = new TMClassifier();
     tmClassifier.loadJSON(options);
     // Temporary solution to prevent classifier loading with
@@ -100,6 +100,7 @@ function setup() {
         options.videoHeight + options.playbarHeight);
     canvas.parent('p5Canvas');
     noCursor();
+    frameRate(30);
     background(245);
     loadingText('video and classifier');
 
