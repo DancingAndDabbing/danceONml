@@ -71,6 +71,8 @@ let preloadedPredictions; // temporary solution to prevent load times on default
 let SmoochSansBlack;
 let BhuTukaExpandedOne;
 let Inconsolata;
+let Quicksand;
+let BabasNeue;
 
 // -----                                       -----
 
@@ -79,6 +81,9 @@ function preload() {
     SmoochSansBlack = loadFont('assets/fonts/SmoochSans-Black.ttf');
     BhuTukaExpandedOne=loadFont('assets/fonts/BhuTukaExpandedOne.ttf')
     Inconsolata=loadFont('assets/fonts/Inconsolata.ttf');
+    Quicksand=loadFont('assets');
+    Inconsolata=loadFont('assets/fonts/Quicksand.ttf');
+    BabasNeue=loadFont('assets/fonts/BebasNeue.ttf');
 
     tmClassifier = new TMClassifier();
     tmClassifier.loadJSON(options);
