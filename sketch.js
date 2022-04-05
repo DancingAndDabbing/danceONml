@@ -72,7 +72,25 @@ let SmoochSansBlack;
 let BhuTukaExpandedOne;
 let Inconsolata;
 let Quicksand;
-let BabasNeue;
+let BebasNeue;
+
+let PatrickHand;
+let RalewayDots;
+let Vibur;
+let LuckiestGuy;
+let Notable;
+let Cinzel;
+let Lobster;
+let Merriweather;
+let EBGaramond;
+let Angkor;
+let GideonRoman;
+let CormorantUpright;
+let ArchitectsDaughter;
+let Orbitron;
+let KaushanScript;
+let PermanentMarker;
+
 
 // -----                                       -----
 
@@ -82,7 +100,27 @@ function preload() {
     BhuTukaExpandedOne=loadFont('assets/fonts/BhuTukaExpandedOne.ttf')
     Inconsolata=loadFont('assets/fonts/Inconsolata.ttf');
     Quicksand=loadFont('assets/fonts/Quicksand.ttf');
-    BabasNeue=loadFont('assets/fonts/BebasNeue.ttf');
+    BebasNeue=loadFont('assets/fonts/BebasNeue.ttf');
+
+    PatrickHand = loadFont('assets/fonts/PatrickHand.ttf');
+    RalewayDots= loadFont('assets/fonts/RalewayDots.ttf');
+    Vibur= loadFont('assets/fonts/Vibur.ttf');
+    LuckiestGuy= loadFont('assets/fonts/LuckiestGuy.ttf');
+    Notable= loadFont('assets/fonts/Notable.ttf');
+    Cinzel= loadFont('assets/fonts/Cinzel.ttf');
+    Lobster= loadFont('assets/fonts/Lobster.ttf');
+    Merriweather = loadFont('assets/fonts/Merriweather.ttf');
+    EBGaramond= loadFont('assets/fonts/EBGaramond.ttf');
+    Angkor= loadFont('assets/fonts/Angkor.ttf');
+    GideonRoma= loadFont('assets/fonts/GideonRoman.ttf');
+    CormorantUpright= loadFont('assets/fonts/CormorantUpright.ttf');
+    ArchitectsDaughter= loadFont('assets/fonts/ArchitectsDaughter.ttf');
+    Orbitron= loadFont('assets/fonts/Orbitron.ttf');
+    KaushanScript= loadFont('assets/fonts/KaushanScript.ttf');
+    PermanentMarker= loadFont('assets/fonts/PermanentMarker.ttf');
+
+
+
 
     tmClassifier = new TMClassifier();
     tmClassifier.loadJSON(options);
