@@ -1,5 +1,5 @@
 // The C section of content
-let CTITLES = ['text', 'tracking', 'added Fonts', 'built-in fonts'];
+let CTITLES = ['text', 'tracking', 'added fonts', 'built-in fonts'];
 
 let c1a = `{ what: 'text' },`;
 let c1b =
@@ -49,7 +49,7 @@ let c3 = `'Angkor',
 'Quicksand',
 'RalewayDots',
 'Vibur',
-`
+`;
 let c4 = `'Arial',
 'Brush Script MT',
 'Courier New',
